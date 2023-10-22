@@ -20,5 +20,5 @@ YouTube以外からダウンロードはYouTube以外のサイトからダウン
 
 ## インストール
 Windowsで開発しましたので基本的にはWindowsしかサポートしません。  
-Releaseページから最新のzipファイルをダウンロードしてください。  
+[Releaseページ](https://github.com/Ziaensodayo/flet_yt/releases)から最新のzipファイルをダウンロードしてください。  
 MacOSやそのほかのOSはリポジトリをクローンしてpyファイルを実行するなり実行ファイルに変換してお使いください。  
