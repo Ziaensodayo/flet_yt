@@ -1,24 +1,42 @@
-# flet_yt
-fletで再構築されたyt-dlpGUI  
+# yt-dlpGUI
 ## これはなに？
-fletで再構築されたyt-dlpGUIです。  
+yt-dlpをGUIで扱えるようにしただけのアプリです。  
+fletというGUIライブラリを使用しているので見た目はかなりいはずです。  
+  
+![image](https://github.com/Ziaensodayo/flet_yt/assets/122286711/fa66ad5f-c5a2-4bf6-a959-47e517f267ff)  
+
+まぁこんな感じなんですよね。  
 ## 使い方
-まずパソコンにpythonとyt-dlp,ffmpegをインストールしてください。    
-yt-dlpはpipでインストール可能です。 `pip install yt-dlp`  
+### 必要なもの
+- Python
+- yt-dlp
+- ffmpeg
 
-![image](https://github.com/Ziaensodayo/flet_yt/assets/122286711/e186eb80-b68a-4f59-970c-d4b89caebe5c)  
-使い方は画像を見ればわかると思います。  
-URLというボックスに動画のリンクを、  
-![image](https://github.com/Ziaensodayo/flet_yt/assets/122286711/3a0a25f0-1db6-4906-9491-84268fc6f1b2)  
-フォーマットはmp4,mp3,flac,wavから選択可能です。  
+です。  
+それぞれ検索すればインストール方法が出てきます。  
+### ダウンロード
+![image](https://github.com/Ziaensodayo/flet_yt/assets/122286711/7a0b0aee-33ff-46e7-a377-b3a87828dacf)  
 
-![image](https://github.com/Ziaensodayo/flet_yt/assets/122286711/a94fbfda-f3f3-4f36-8d1e-a7a032e3a873)  
-プレイリストでフォルダ分けはプレイリスト毎にフォルダ分けされます。そのまんまですね。プレイリストのリンクからダウンロードしない場合は/NAになります。  
-メタデータを埋め込むもその名の通りファイルにメタデータを埋め込みます。  
-YouTube以外からダウンロードはYouTube以外のサイトからダウンロードする際に使用します。標準で動かない場合はこれを試してください。  
-なおYouTube以外からのダウンロードではフォーマット選択などできませんので注意してください。  
+これをダウンロードして→適当なところに解凍します。  
+Macの方はこのリポジトリを`git clone`してもらって中にある`app-mac.py`を実行して下さい。  
+### 使う
+![image](https://github.com/Ziaensodayo/flet_yt/assets/122286711/9ba020f8-bb26-4ec8-b2f7-7498581eb46b)  
 
-## インストール
-Windowsで開発しましたので基本的にはWindowsしかサポートしません。  
-Releaseページから最新のzipファイルをダウンロードしてください。  
-MacOSやそのほかのOSはリポジトリをクローンしてpyファイルを実行するなり実行ファイルに変換してお使いください。  
+URLを入力し→  
+
+![image](https://github.com/Ziaensodayo/flet_yt/assets/122286711/9aea9506-96ac-48c9-977e-8408e7e6b0ab)  
+
+拡張子を選択します。オプションは mp4、mp3、flac、wav となります。  
+
+![image](https://github.com/Ziaensodayo/flet_yt/assets/122286711/477522dd-ddfc-4359-abfb-069f52996c12)  
+
+これはいろんなオプションです。それぞれ  
+- プレイリストでフォルダ分け : プレイリストの名前のフォルダに配置されます。
+- メタデータを埋め込む : ダウンロードされたファイルにメタデータを埋め込みます。
+- YouTube以外からダウンロード : YouTube以外のサイトからダウンロードする際に使えるかもしれないオプションです。
+
+あとはダウンロードするだけですね。はい。  
+> 適当で後免!!
+> Chu!!
+
+以上です。
