@@ -18,7 +18,8 @@ fletというGUIライブラリを使用しているので見た目はかなり�
 ![image](https://github.com/Ziaensodayo/flet_yt/assets/122286711/7a0b0aee-33ff-46e7-a377-b3a87828dacf)  
 
 これをダウンロードして→適当なところに解凍します。  
-Macの方はこのリポジトリを`git clone`してもらって中にある`app-mac.py`を実行して下さい。  
+Macの方はMacOSArm.zipの方をダウンロードして解凍→中にある.pyファイルを実行します。  
+`python yt-dlpGUI-mac.py` で実行可能。
 ### 使う
 ![image](https://github.com/Ziaensodayo/flet_yt/assets/122286711/9ba020f8-bb26-4ec8-b2f7-7498581eb46b)  
 
