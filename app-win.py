@@ -2,6 +2,7 @@ import flet as ft
 import time
 import subprocess
 
+# ウィンドウ
 def main(page: ft.Page):
     appname = "yt-dlpGUI-v1.1"
     
@@ -11,6 +12,20 @@ def main(page: ft.Page):
     page.window_height = 460
     page.window_width = 400
     page.window_resizable = False
+
+    def close_dlg(e):
+        err_dlg.open = False
+        page.update()
+
+    err_dlg = ft.AlertDialog(
+        title=ft.Text("エラー"),
+        modal=True,
+        content=ft.Text("ダウンロード中にエラーが発生しました。"),
+        actions=[
+            ft.TextButton("閉じる",on_click=close_dlg),
+        ],
+        actions_alignment=ft.MainAxisAlignment.END,
+    )
 
     appheader = ft.Text(appname, style=ft.TextThemeStyle.HEADLINE_SMALL)
     progress = ft.ProgressBar(height=5)
@@ -31,6 +46,7 @@ def main(page: ft.Page):
     metadata_sw = ft.Switch(label=" メタデータを埋め込む")
     othersite_sw = ft.Switch(label=" YouTube以外からダウンロード(非サポート)")
 
+    #ダウンロード前、後の処理
     def download(e):
         if url_input.value == "" or format_dd.value == "":
             dl_btn.text = "URLを入力して下さい"
@@ -65,6 +81,8 @@ def main(page: ft.Page):
                 print(f"ダウンロード処理は終了コード{result}で正常に終了しませんでした。")
                 dl_btn.text = "エラーが発生しました"
                 dl_btn.icon = ft.icons.ERROR
+                page.dialog = err_dlg
+                err_dlg.open = True
                 page.remove(progress)
                 page.update()
                 time.sleep(3)
@@ -74,6 +92,7 @@ def main(page: ft.Page):
                 page.update()
                 return
     
+    #ダウンロード処理
     def video_dl(url, fmt):
         print(f"{url}を,{fmt}でダウンロードします。")
 
@@ -177,7 +196,7 @@ def main(page: ft.Page):
             
     dl_btn = ft.FilledTonalButton("ダウンロード", icon=ft.icons.DOWNLOAD, on_click=download)
     
-
+    #要素の追加
     page.add(appheader,
              url_input,
              format_dd,
